@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Contact Us</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="css/solnet.css" />
+</head>
+<body>
+	<div th:replace="header :: header"></div>
+
+	<div class="container">
+		<div class="row contactus-text grey-header">
+			<div class="col-md-8 col-md-offset-2">Thank you, we will be in
+				touch shortly...</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		window.setTimeout(function() {
+			window.location = "http://www.solnet.co.nz/";
+		}, 3000);
+	</script>
+</body>
+</html>
