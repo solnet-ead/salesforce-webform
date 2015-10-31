@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.context.web.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.context.annotation.Scope;
@@ -21,7 +23,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableAsync
 @PropertySource("classpath:/config/application.properties")
-public class Application {
+public class Application extends SpringBootServletInitializer {
 	private static final String AUTH_GRANT_TYPE = "password";
 
 	@Value("${salesforce.app.client.id}")
@@ -75,8 +77,12 @@ public class Application {
 		params.add("client_secret", propAppClientSecret);
 		params.add("username", propUsername);
 		params.add("password", new StringBuilder(propPassword).append(propSecurityToken).toString());
-
 		return new HttpEntity<MultiValueMap<String, String>>(params, headers);
+	}
+
+	@Override
+	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+		return application.sources(Application.class);
 	}
 
 	/**

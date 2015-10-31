@@ -23,11 +23,12 @@ Locate `application.properties` under `src/main/resources/config` where configur
 # Build the project using Maven.
 ~$ cd salesforce-webform
 ~$ mvn clean install
-# Launch with Maven.
+# Launch directly with Maven.
 ~$ mvn spring-boot:run -Dserver.port=<Port>
-# Alternatively, you can launch from a packaged JAR file.
+# Alternatively, launch from executable WAR.
 ~$ mvn package
-~$ java -jar target/salesforce-webform-0.1.0.jar --server.port=<port>
+~$ java -jar target/salesforce-webform-0.1.0.war --server.port=<port>
+# You can also deploy the WAR file to into a servlet container.
 ```
 
 You may omit *server.port=<Port>* in which case the port number will default to 8080. The website should be accessible at `http://localhost:<port>/contact`. After successfully submitted a form, login to Salesforce and navigate the dashboard to `Leads` - you should see new entries appear.
