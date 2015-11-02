@@ -1,4 +1,10 @@
 /target
+node_modules
+bower_components
 .settings/
 .classpath
 .project
+.idea
+*.iml
+application.properties
+

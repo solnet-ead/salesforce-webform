@@ -4,6 +4,8 @@
 <title>Contact Us</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" href="css/solnet.css" />
+
+<script src="js/angular.min.js"></script>
 </head>
 <body>
 	<div th:replace="header :: header"></div>
@@ -29,9 +31,12 @@
 						</tr>
 						<tr>
 							<td>Contact email</td>
+							<!--
 							<td><input type="text" th:field="*{email}" /></td>
 							<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
 								style="color: red;" />
+								-->
+							<td><input type="email" th:field="*{email}" /></td>
 						</tr>
 						<tr>
 							<td>Phone no.</td>
