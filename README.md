@@ -14,10 +14,9 @@
 
 #####  2015-11-05
 1. add bootstrap validator to form
-2. restructured css for UI
-3. new branch 'origin_no_frontend' is created for later reference
-4. defect found: thymeleaf data binding no longer working, which need further root cause debugging
-5. steps to install
+2. restructured css for UI update
+3. new branch **'origin_no_frontend'** is created for later reference
+4. steps to install
 
   - npm install
   - bower install
