@@ -1,18 +1,49 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Contact Us</title>
+<title>Contact us successed page</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link rel="stylesheet" href="css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/bootstrapvalidator.min.css" />
 <link rel="stylesheet" href="css/solnet.css" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrapvalidator.min.js"></script>
+<script src="js/app.js"></script>
+
+<script src="js/angular.min.js"></script>
+
 </head>
+
 <body>
-	<div th:replace="header :: header"></div>
+	<div class="outer-row">
+		<div class="container">
+			<div class="navbar-header">
+				<div class="col-lg-4 col-md-3 col-md-offset-1 col-xs-3">
+					<a class="navbar-brand fade-color"></a>
+				</div>
+			</div>
+			<div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
+				<ul class="nav navbar-nav">
+					<li><span class="navbar-border"></span> <a class="navbar-padded-buttons fade-color">Case studies</a></li>
+					<li><span class="navbar-border"></span> <a class="navbar-padded-buttons fade-color">Capabilities</a></li>
+					<li><span class="navbar-border"></span> <a class="navbar-padded-buttons fade-color">Careers</a></li>
+					<li><span class="navbar-border"></span> <a class="navbar-padded-buttons fade-color">About us</a></li>
+					<li><span class="navbar-border"></span> <a class="navbar-padded-buttons fade-color">Contact us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>	
 
 	<div class="container">
-		<div class="row contactus-text grey-header">
-			<div class="col-md-8 col-md-offset-2">Thank you, we will be in
-				touch shortly...</div>
-		</div>
+		<div class="form-group">
+ 			<div class="col-md-2"></div>
+ 			<div class="col-md-8"><h1 class="contactus-text">Thank you, we will be in
+				touch shortly...</h1></div>
+ 			<div class="col-md-2"></div>
+    	</div>
 	</div>
 	<script type="text/javascript">
 		window.setTimeout(function() {

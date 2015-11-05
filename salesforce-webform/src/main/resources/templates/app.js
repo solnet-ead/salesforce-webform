@@ -6,28 +6,28 @@ $(document).ready(function() {
             validating: 'glyphicon glyphicon-refresh'
         },
         fields: {
-            inputFirstName: {
+            firstname: {
                 validators: {
                     notEmpty: {
                         message: 'The first name is required and cannot be empty'
                     }
                 }
             },
-            inputLastName: {
+            lastname: {
                 validators: {
                     notEmpty: {
                         message: 'The last name is required and cannot be empty'
                     }
                 }
             },
-            inputEmail: {
+            email: {
                 validators: {
                     notEmpty: {
                         message: 'The email is required and cannot be empty'
                     }
                 }
             },
-            inputMessage: {
+            message: {
                 validators: {
                     notEmpty: {
                         message: 'The message is required and cannot be empty'

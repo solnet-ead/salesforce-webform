@@ -35,60 +35,7 @@
 			</div>
 		</div>
 	</div>
-  <!--
-	<div>
-		<form action="#" th:action="@{/contact}" th:object="${contactForm}" method="post">
-					<table>
-						<tr>
-							<td>First name</td>
 
-							<td><input type="text" th:field="*{firstname}" /></td>
-							<td th:if="${#fields.hasErrors('firstname')}"
-								th:errors="*{firstname}" style="color: red;" />
-
-						</tr>
-						<tr>
-							<td>Last name</td>
-							<td><input type="text" th:field="*{lastname}" /></td>
-							<td th:if="${#fields.hasErrors('lastname')}"
-								th:errors="*{lastname}" style="color: red;" />
-						</tr>
-						<tr>
-							<td>Contact email</td>
-							
-							<td><input type="text" th:field="*{email}" /></td>
-							<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
-								style="color: red;" />
-							
-							
-						</tr>
-						<tr>
-							<td>Phone no.</td>
-							<td><input type="text" th:field="*{phone}" /></td>
-							<td th:if="${#fields.hasErrors('phone')}" th:errors="*{phone}"
-								style="color: red;" />
-						</tr>
-						<tr>
-							<td>Company</td>
-							<td><input type="text" th:field="*{company}" /></td>
-							<td th:if="${#fields.hasErrors('company')}"
-								th:errors="*{company}" style="color: red;" />
-						</tr>
-						<tr>
-							<td>Message</td>
-							<td><textarea th:field="*{message}" class="full-textarea"
-									rows="10"></textarea></td>
-							<td th:if="${#fields.hasErrors('message')}"
-								th:errors="*{message}" style="color: red;" />
-						</tr>
-						<tr>
-							<td colspan="2"><button type="reset" style="float: right;">Reset</button>
-								<button type="submit" style="float: right;">Submit</button></td>
-						</tr>
-					</table>
-		</form>
-	</div>
- -->
  <div class="container">
 
  	<form id="cForm" action="#" th:action="@{/contact}" th:object="${contactForm}" class="form-horizontal" method="post">
@@ -100,9 +47,9 @@
     	</div>
  		
  		<div class="form-group has-feedback">
- 			<label for="inputFirstName" class="control-label col-md-4">First Name:</label>
+ 			<label for="firstname" class="control-label col-md-4">First Name:</label>
  			<div class="col-md-4">
- 				<input type="text" class="form-control" id="inputFirstName" name="inputFirstName" placeholder="First name" th:field="*{firstname}" />
+ 				<input type="text" class="form-control" id="firstname" name="firstname" placeholder="First name" th:field="*{firstname}" />
  				<span id="fname" class="glyphicon form-control-feedback"></span>
  			</div>
  			<div class="col-md-4"></div>
@@ -110,45 +57,45 @@
 
 
  		<div class="form-group has-feedback">
- 			<label for="inputLastName" class="control-label col-md-4">Last name:</label>
+ 			<label for="lastname" class="control-label col-md-4">Last name:</label>
  			<div class="col-md-4">
- 				<input type="text" class="form-control" id="inputLastName" name="inputLastName" placeholder="Last Name"/>
+ 				<input type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" th:field="*{lastname}" />
  				<span id="lname" class="glyphicon form-control-feedback"></span>
  			</div>
  			<div class="col-md-4"></div>
  		</div>
 
  		<div class="form-group has-feedback">
- 			<label for="inputEmail" class="control-label col-md-4">Contact email:</label>
+ 			<label for="email" class="control-label col-md-4">Contact email:</label>
  			<div class="col-md-4">
- 				<input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Email"/>
+ 				<input type="email" class="form-control" id="email" name="email" placeholder="Email" th:field="*{email}" />
  				<span id="email" class="glyphicon form-control-feedback"></span>
  			</div>
  			<div class="col-md-4"></div>
  		</div> 	
 
  		<div class="form-group has-feedback">
- 			<label for="inputPhoneNumber" class="control-label col-md-4">Phone no.</label>
+ 			<label for="phone" class="control-label col-md-4">Phone no.</label>
  			<div class="col-md-4">
- 				<input type="text" class="form-control" id="inputPhoneNumber" name="inputPhoneNumber" placeholder="phone number"/>
+ 				<input type="text" class="form-control" id="phone" name="phone" placeholder="phone number" th:field="*{phone}" />
  				<span id="pnumber" class="glyphicon form-control-feedback"></span>
  			</div>
  			<div class="col-md-4"></div>
  		</div>
 
  		<div class="form-group has-feedback">
- 			<label for="inputCompany" class="control-label col-md-4">Company:</label>
+ 			<label for="company" class="control-label col-md-4">Company:</label>
  			<div class="col-md-4">
- 				<input type="text" class="form-control" id="inputCompany" name="inputCompany" placeholder="Company"/>
+ 				<input type="text" class="form-control" id="company" name="company" placeholder="Company" th:field="*{company}" />
  				<span id="company" class="glyphicon form-control-feedback"></span>
  			</div>
  			<div class="col-md-4"></div>
  		</div>
 
  		<div class="form-group has-feedback">
- 			<label for="inputMessage" class="control-label col-md-4">Message:</label>
+ 			<label for="message" class="control-label col-md-4">Message:</label>
  			<div class="col-md-4">
- 				<textarea class="form-control" id="inputMessage" name="inputMessage" rows="8" placeholder="Message"/>
+ 				<textarea class="form-control" id="message" name="message" rows="8" placeholder="Message" th:field="*{message}" />
  				<span id="message" class="glyphicon form-control-feedback"></span>
  			</div>
  			<div class="col-md-4"></div>
