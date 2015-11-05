@@ -1,0 +1,35 @@
+.fade-color {
+	-webkit-transition: color .2s ease-in-out;
+	-moz-transition: color .2s ease-in-out;
+	-ms-transition: color .2s ease-in-out;
+	-o-transition: color .2s ease-in-out;
+	transition: color .2s ease-in-out;
+	cursor: pointer
+}
+
+.navbar-brand {
+	float: left;
+	padding: 13px 15px;
+	font-family: solnet;
+	line-height: 103px;
+	display: block;
+	background-image: url(../images/solnet-logo.svg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	width: 155px;
+	height: 55px;
+	background-position: center;
+	cursor: pointer
+}
+
+.outer-row {
+	display: block;
+	width: 100%;
+	padding: 10px 0
+}
+
+.contactus-text {
+	font-size: 48px;
+    color: #1e88d8;
+    text-align: left
+}

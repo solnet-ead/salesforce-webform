@@ -18,13 +18,51 @@ module.exports = function(grunt) {
 
     // Task configuration.
     clean: {
-      src: 'src/main/resources/public/js'
+      src: ['src/main/resources/public/js', 'src/main/resources/public/css', 'src/main/resources/public/fonts']
     },
     copy: {
       angular: {
-        src: 'bower_components/angular/angular.min.js',
-        dest: 'src/main/resources/public/js/angular.min.js',
+        src: ['bower_components/angular/angular.min.js'],
+        dest: 'src/main/resources/public/js/angular.min.js'
       },
+      jquery: {
+        src: ['bower_components/jquery/dist/jquery.min.js'],
+        dest: 'src/main/resources/public/js/jquery.min.js'
+      },    
+      bootstrapJs: {
+        src: 'bower_components/bootstrap/dist/js/bootstrap.min.js',
+        dest: 'src/main/resources/public/js/bootstrap.min.js'
+      },
+      bootstrapCss: {
+        src: 'bower_components/bootstrap/dist/css/bootstrap.min.css',
+        dest: 'src/main/resources/public/css/bootstrap.min.css'
+      },
+      bootstrapTheme: {
+        src: 'bower_components/bootstrap/dist/css/bootstrap-theme.min.css',
+        dest: 'src/main/resources/public/css/bootstrap-theme.min.css'
+      },
+      bootstrapGlyphicons: {
+        expand: true,
+        cwd: 'bower_components/bootstrap/fonts/',
+        src: ['**'],
+        dest: 'src/main/resources/public/fonts/'
+      },        
+      bootstrapValidatorCss: {
+        src: 'bower_components/bootstrapValidator/dist/css/bootstrapValidator.min.css',
+        dest: 'src/main/resources/public/css/bootstrapValidator.min.css'
+      },
+      bootstrapValidatorJs: {
+        src: 'bower_components/bootstrapValidator/dist/js/bootstrapValidator.min.js',
+        dest: 'src/main/resources/public/js/bootstrapValidator.min.js'
+      },
+      appJs: {
+        src: 'src/main/resources/templates/app.js',
+        dest: 'src/main/resources/public/js/app.js'
+      },
+      solnetCss: {
+        src: 'src/main/resources/templates/solnet.css',
+        dest: 'src/main/resources/public/css/solnet.css'
+      }    
     },
     eslint: {
       target: [

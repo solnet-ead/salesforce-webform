@@ -7,4 +7,6 @@ bower_components
 .idea
 *.iml
 application.properties
-
+fonts/
+js/
+css/
