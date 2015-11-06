@@ -33,10 +33,11 @@
 3. deleted no-used files
 4. steps to install
   - npm install
-  ~~- bower install~~
+  - ~~bower install~~
   - grunt -v
   - mvn clean install
   - mvn spring-boot:run
+
 ##### **improvement space: integrate maven commands into grunt**
 
  
