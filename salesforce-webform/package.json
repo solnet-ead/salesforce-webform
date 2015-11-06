@@ -29,7 +29,6 @@
     "tmp": "0.0.23"
   },
   "scripts": {
-    "postinstall": "bower install",
-    "prestart": "npm install"
+    "postinstall": "bower install"
   }
 }

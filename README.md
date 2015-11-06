@@ -27,3 +27,17 @@
   - mvn spring-boot:run
 
 
+####  **2015-11-06**
+1. minified **app.js** to **app.min.js** with solnet copyright banner 
+2. updated package.json to run bower install **ONLY** once by npm:postinstall
+3. deleted no-used files
+4. steps to install
+  - npm install
+  ~~- bower install~~
+  - grunt -v
+  - mvn clean install
+  - mvn spring-boot:run
+##### **improvement space: integrate maven commands into grunt**
+
+ 
+

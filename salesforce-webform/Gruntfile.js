@@ -55,12 +55,8 @@ module.exports = function(grunt) {
         src: 'bower_components/bootstrapValidator/dist/js/bootstrapValidator.min.js',
         dest: 'src/main/resources/public/js/bootstrapValidator.min.js'
       },
-      appJs: {
-        src: 'src/main/resources/templates/app.js',
-        dest: 'src/main/resources/public/js/app.js'
-      },
       solnetCss: {
-        src: 'src/main/resources/templates/solnet.css',
+        src: 'src/main/resources/templates/app.css',
         dest: 'src/main/resources/public/css/solnet.css'
       }    
     },
@@ -69,12 +65,21 @@ module.exports = function(grunt) {
         'Gruntfile.js',
         'src/main/resources/public/js/**/*.js'
       ]
-    }
+    },
+    uglify: {
+      options: {
+        banner: '<%= banner %>'
+      },
+      dist: {
+        src: 'src/main/resources/templates/app.js',
+        dest: 'src/main/resources/public/js/app.min.js'
+      }
+    },
   });
 
   // filter npm modules and load them
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
   // Add task aliases
-  grunt.registerTask('default', ['clean', 'copy', 'eslint']);
+  grunt.registerTask('default', ['clean', 'copy', 'uglify', 'eslint']);
 };
