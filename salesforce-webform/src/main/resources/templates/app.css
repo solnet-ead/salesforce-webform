@@ -33,3 +33,46 @@
     color: #1e88d8;
     text-align: left
 }
+
+
+body.modal-open #cForm{
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(15px);
+    -o-filter: blur(15px);
+    -ms-filter: blur(15px);
+    filter: blur(15px);
+}
+
+.modal-dialog {
+  position:absolute;
+  top:70% !important;
+  transform: translate(0, -50%) !important;
+  -ms-transform: translate(0, -50%) !important;
+  -webkit-transform: translate(0, -50%) !important;
+  margin:auto 5%;
+  width:90%;
+  height:80%;
+}
+
+.modal-content-header {
+	color: black;
+	font-family: fantasy;
+}
+
+.modal-content-text {
+	color: black;
+	font-family: cursive;
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.modal-backdrop {background: #f3f3f3;}
+
+.close {
+    font-size: 50px;
+    display:block;
+}
+
+.glyphicon-links {
+    font-size: 1.2em;
+}
