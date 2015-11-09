@@ -41,4 +41,6 @@
 ##### **improvement space: integrate maven commands into grunt**
 
  
+####  **2015-11-09**
+plug Bootstrap modal into glyph-icon link with project **intro** pop-up
 
